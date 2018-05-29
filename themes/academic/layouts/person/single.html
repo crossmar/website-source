@@ -1,0 +1,112 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<article class="article article-project" itemscope itemtype="http://schema.org/Person">
+
+  {{ partial "header_image.html" . }}
+
+  <div class="article-container person-article">
+
+    <div class="pub-title">
+      <h1 itemprop="name">{{ .Title }}</h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        {{ partial "share.html" . }}
+      </span>
+    </div>
+
+    {{ with .Params.external_link }}
+    <a class="btn btn-primary btn-outline" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "open_project_site" }}</a>
+    {{ end }}
+
+    <div class="person-title">
+      {{ with .Params.name }}<span class="personNameTitle">{{ . | markdownify }}</span>{{ end }}
+      {{ with .Params.role }} <span class="personRoleTitle" itemprop="jobTitle"> - {{ . | markdownify }}</span>{{ end }}
+    </div>
+    <div class="row" >
+      <div class="col-lg-4">
+            {{ with .Params.avatar }}
+    <a href="{{ $.Scratch.Get "person_url" }}" title="" class="card-image hover-overlay"
+      {{ $.Scratch.Get "target" | safeHTMLAttr }}>
+      <img src="{{ "/img/" | relURL }}{{ . }}" alt="" class="img-responsive person-img">
+    </a>
+    {{ end }} <!-- with avatar -->
+    {{ with .Params.params }}<div class="col-sm-12">
+      {{ range .social }}
+      {{ $pack := or .icon_pack "fa" }}
+      <span>
+        <a itemprop="sameAs" href="{{ .link | safeURL }}" target="_blank" rel="noopener">
+          <i class="{{ $pack }} {{ $pack }}-{{ .icon }} medium-circled-icon" title="{{ .title }}"></i>
+        </a>
+      </span>
+      {{ end }}
+    </div> {{ end }}
+      </div>
+      <div class="col-lg-8" >
+        {{ with .Params.education }} <div class="col-sm-12">
+          <h3>{{ i18n "education" | markdownify }}</h3>
+          <ul class="ul-edu fa-ul">
+            {{ range .courses }} <li>
+              <i class="fa-li fa fa-graduation-cap"></i>
+              <div class="description">
+                <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
+                <p class="institution">{{ .institution }}</p>
+              </div>
+            </li> {{ end }}
+          </ul>
+        </div> {{ end }} <!-- with education -->
+      </div>
+  </div>
+
+    <div class="article-style" itemprop="articleBody">
+      {{ .Content }}
+    </div>
+    <div class="tags">
+      {{ partial "tags.html" . }}
+    </div>
+
+    {{ $page := . }}
+    {{ $project := .File.TranslationBaseName }}
+    {{ $project_path := printf "%s/%s/" .Section $project }}
+
+    {{ if (.Site.Params.people.list_children | default true) }}
+      {{ $items := where (where .Site.RegularPages "Type" "publication") ".Params.people" "intersect" (slice $project) }}
+      {{ $items := $items | union (where (where .Site.RegularPages "Type" "publication") ".Params.url_project" $project_path) }}
+      {{ $pubs_len := len $items }}
+      {{ if ge $pubs_len 1 }}
+        <h2>{{ (i18n "publications") }}</h2>
+        {{ range $items }}
+          {{ if eq $page.Site.Params.people.publication_format 1 }}
+            {{ partial "publication_li_detailed" . }}
+          {{ else if eq $page.Site.Params.people.publication_format 2 }}
+            {{ partial "publication_li_apa" . }}
+          {{ else if eq $page.Site.Params.people.publication_format 3 }}
+            {{ partial "publication_li_mla" . }}
+          {{ else }}
+            {{ partial "publication_li_simple" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      {{ $items := where (where .Site.RegularPages "Type" "talk") ".Params.people" "intersect" (slice $project) }}
+      {{ $items := $items | union (where (where .Site.RegularPages "Type" "publication") ".Params.url_project" $project_path) }}
+      {{ $talks_len := len $items }}
+      {{ if ge $talks_len 1 }}
+        <h2>{{ (i18n "talks") }}</h2>
+        {{ range $items }}
+          {{ partial "talk_li_simple" . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+  </div>
+</article>
+
+{{ if .Site.Params.section_pager }}
+<div class="article-container article-widget">
+  {{ partial "section_pager.html" . }}
+</div>
+{{ end }}
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}

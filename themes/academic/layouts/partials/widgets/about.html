@@ -1,0 +1,30 @@
+{{ $ := .root }}
+{{ $page := .page }}
+
+<!-- About widget -->
+<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="{{ if $.Site.Params.email }}person-email{{ end }}{{ if $.Site.Params.phone }} person-telephone{{ end }}{{ if $.Site.Params.address}} person-address{{ end }}">
+    {{ with $page.Params.interests }}
+    <div class="col-sm-12 col-md-3">
+      <h3>{{ i18n "interests" | markdownify }}</h3>
+      <ul class="ul-interests">
+        {{ range .interests }}
+        <li>{{ . | markdownify }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  <div class="col-xs-12 col-md-9" itemprop="description">
+
+    {{ $page.Content }}
+
+  </div>
+  <div class="col-md-3" >
+    {{ with $page.Params.youtube }}
+      <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+        <iframe src="//www.youtube.com/embed/{{ . }}"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="{{ $page.Params.youtube_caption }}"></iframe>
+      </div>
+      <span class="youtube-caption"><small>{{ $page.Params.youtube_caption }}</small></span>
+    {{ end }}
+  </div>
+</div>
