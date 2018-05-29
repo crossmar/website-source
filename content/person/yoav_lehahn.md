@@ -40,7 +40,7 @@ weight = 1
 # List your qualifications (such as academic degrees).
 [[education.courses]]
   course = "PhD in Oceanography"
-  institution = "Université Pierre et Marie Curie, France and Tel-Aviv University. Joint Ph.D. recognized by the two universities."
+  institution = "Université Pierre et Marie Curie, France and Tel-Aviv University"
   year = 2008
 
 [[education.courses]]

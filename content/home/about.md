@@ -32,7 +32,7 @@ weight = 5
  
  
 youtube = "-RK6wtQtPsw"
-youtube_caption = "A sequence of satellite chlorophyll images, showing the three month evolution a dispersing phytoplankton bloom in the North Pacific Subtropical gyre. By reducing grazing pressure the dispersion process provides optimal conditions for accumulation of photosynthetic biomass (Lehahn et al., 2017)."
+youtube_caption = "A sequence of satellite chlorophyll images, showing the three month evolution of a dispersing phytoplankton bloom in the North Pacific Subtropical gyre. By reducing grazing pressure the dispersion process provides optimal conditions for accumulation of photosynthetic biomass (Lehahn et al., 2017)."
  
 +++
 
