@@ -3,7 +3,7 @@ title = "Expression profiling of host and virus during a coccolithophore bloom p
 date = 2017-10-08T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Uri Sheyn", "Shilo Rosenwasser", "Yoav Lehahn", "Noa Barak-Gavish", "Ron Rotkopf", "Kay D. Bidle", "Ilan Koren", "Daniella Schatz", "Assaf Vardi"]
+authors = ["Uri Sheyn", "Shilo Rosenwasser", "**Yoav Lehahn**", "Noa Barak-Gavish", "Ron Rotkopf", "Kay D. Bidle", "Ilan Koren", "Daniella Schatz", "Assaf Vardi"]
 
 # Publication type.
 # Legend:

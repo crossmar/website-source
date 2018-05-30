@@ -3,7 +3,7 @@ title = "Intrusion of coastal waters into the pelagic Eastern Mediterranean: in 
 date = 2013-05-21T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Shai Efrat", "Yoav Lehahn", "Eyal Rahav", "Nurit Kress", "Barak Herut", "Issac Gertman", "Ron Goldman", "Tal Ozer", "Michael Lazar", "Eyal Heifetz"]
+authors = ["**Shai Efrati**", "**Yoav Lehahn**", "Eyal Rahav", "Nurit Kress", "Barak Herut", "Issac Gertman", "Ron Goldman", "Tal Ozer", "Michael Lazar", "Eyal Heifetz"]
 
 # Publication type.
 # Legend:
@@ -60,7 +60,7 @@ url_preprint = "https://www.biogeosciences.net/10/3349/2013/"
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
 image = "headers/Intrusion_of_coastal_waters_into_the_pelagic_Eastern_Mediterranean_in_situ_and_satellite-based_characterization.png"
-caption = "..."
+caption = "Sea surface chlorophyll-a associated with the intrusive patch observed on 22 August 2011."
 
 +++
 

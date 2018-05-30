@@ -3,7 +3,7 @@ title = "Dispersion/dilution enhances phytoplankton blooms in nutrient-limited w
 date = 2017-03-31T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Yoav Lehahn", "Ilan Koren", "Shlomit Sharoni", "Francesco d'Ovidio", "Assaf Vardi", "Emmanuel Boss"]
+authors = ["**Yoav Lehahn**", "Ilan Koren", "Shlomit Sharoni", "Francesco d'Ovidio", "Assaf Vardi", "Emmanuel Boss"]
 
 # Publication type.
 # Legend:
@@ -60,7 +60,7 @@ url_preprint = ""
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
 image = "headers/Dispersion_dilution_enhances_phytoplankton_blooms_in_nutrient-limited_waters.png"
-caption = "..."
+caption = "Spatio-temporal evolution of the 2007 bloom. Satellite-derived maps of chlorophyll concentrations showing snapshots from the 3 months bloom evolution."
 
 +++
 

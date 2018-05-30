@@ -3,7 +3,7 @@ title = "Decoupling physical from biological processes to assess the impact of v
 date = 2014-09-08T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Yoav Lehahn", "Ilan Koren", "Daniela Schatz", "Miguel Frada", "Uri Sheyn", "Emmanuel Boss", "Shai Efrati", "Yinon Rudich", "Miri Trainic", "Shlomit Sharoni", "Chrisitan Laber", "Giacomo R DiTullio", "Marco J.L. Coolen", "Ana Maria Martins", "Benjamin A.S. Van Mooy", "Kay D. Bidle", "Assaf Vardi"]
+authors = ["**Yoav Lehahn**", "Ilan Koren", "Daniela Schatz", "Miguel Frada", "Uri Sheyn", "Emmanuel Boss", "**Shai Efrati**", "Yinon Rudich", "Miri Trainic", "Shlomit Sharoni", "Chrisitan Laber", "Giacomo R DiTullio", "Marco J.L. Coolen", "Ana Maria Martins", "Benjamin A.S. Van Mooy", "Kay D. Bidle", "Assaf Vardi"]
 
 # Publication type.
 # Legend:
