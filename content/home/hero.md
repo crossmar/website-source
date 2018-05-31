@@ -4,7 +4,7 @@ widget = "hero"
 active = true
 date = 2017-10-15T00:00:00
 
-title = "The Cross-Disciplinary Marine Studies Research Group (CROSSMAR)"
+title = "The Cross-Disciplinary Marine Studies (CROSSMAR) Laboratory"
 
 # Order that this section will appear in.
 weight = 3
