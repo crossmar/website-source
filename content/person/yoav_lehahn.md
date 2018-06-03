@@ -5,7 +5,7 @@ date = 2016-04-27T00:00:00
 active = true
 
 # Your details.
-name = "Yoav Lehahn"
+name = "Dr. Yoav Lehahn"
 role = "Group Leader"
 # tags = ["faculty"]
 
