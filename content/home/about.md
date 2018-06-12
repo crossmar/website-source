@@ -42,9 +42,8 @@ The marine environment is a complex and diverse system, involving multiple inter
 
 The approach we take is based on integrating theoretical work with acquisition, processing, analysis and interpretation of (i) in-situ data and (ii) remote sensing data from satellites and from small unmanned aerial systems (sUAS). This multi-platform approach allows coverage of a variety of interactions over a wide range of spatial and temporal scales, thus contributing to our ability to understand, monitor and protect the marine environment.
 
-# Who are we looking for?
 
-We are looking for research students, especially those interested in one or more of the following:
+**We are looking for research students**, especially those interested in one or more of the following:
 
 - Study of interactions between biotic and a-biotic elements in the marine environment.
 

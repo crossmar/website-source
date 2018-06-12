@@ -1,6 +1,6 @@
 +++
 title = "A satellite-based Lagrangian view on phytoplankton dynamics"
-date = 2017-09-29T00:00:00
+date = 2018-01-01T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["**Yoav Lehahn**", "Francesco d'Ovidio", "Ilan Koren"]

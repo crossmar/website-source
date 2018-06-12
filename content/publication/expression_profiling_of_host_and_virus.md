@@ -1,6 +1,6 @@
 +++
 title = "Expression profiling of host and virus during a coccolithophore bloom provides insights into the role of viral infection in promoting carbon export"
-date = 2017-10-08T00:00:00
+date = 2018-01-15T00:00:00
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Uri Sheyn", "Shilo Rosenwasser", "**Yoav Lehahn**", "Noa Barak-Gavish", "Ron Rotkopf", "Kay D. Bidle", "Ilan Koren", "Daniella Schatz", "Assaf Vardi"]
