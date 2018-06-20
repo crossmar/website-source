@@ -42,7 +42,7 @@ weight = 4
 # List your qualifications (such as academic degrees).
 
 [[education.courses]]
-  course = "BSc in Oceanography and Apllied Calculus and Statistics"
+  course = "BSc in Oceanography and Applied Calculus and Statistics"
   institution = " University of Washington"
   year = 2017
  
