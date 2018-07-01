@@ -2,12 +2,11 @@
 +++
 # Date this page was created.
 date = 2018-05-23T00:00:00
-active = false
+active = true
 
 # Your details.
 name = "Elad Topel"
-# role = "Lab Manager"
-# tags = ["msc-student"]
+# tags = ["phd-student"]
 
 # Organizations/Affiliations.
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -15,12 +14,11 @@ organizations = [ { name = "Haifa University", url = "http://marsci.haifa.ac.il/
 
 gravatar = false  # Get your avatar from Gravatar.com? (true/false)
 avatar = "people/elad_topel.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-# email = "sefrati1@univ.haifa.ac.il"
+# email = ""
 address = "Multipurpose Building, Room 666, University of Haifa, Mt. Carmel, Haifa 3498838, Israel"
-office_hours = "email for appointment"
-# phone = "+972-545-280-992"
-# fax = "+972-4-828-8267"
-# skype = "echo123"
+# phone = ""
+# fax = ""
+# skype = ""
 # telegram = ""
 
 # Enable Keybase in Contact widget by entering your keybase.io username.
@@ -41,27 +39,32 @@ weight = 4
 # List your qualifications (such as academic degrees).
 
 [[education.courses]]
-  course = "BSc in "
-  institution = "Washington"
-  year = 2017
+  course = "BSc in Geography, Philosophy and Islam"
+  institution = "The Hebrew University of Jerusalem"
  
-  [[params.social]]
-    title = "email"
-    icon = "envelope"
-    icon_pack = "fa"
-    link = "mailto:"
+[[education.courses]]
+  course = "MSc in Ecology/Life Sciences"
+  institution = "Ben Gurion University of the Negev and The Arava Institute"
+
+#  [[params.social]]
+#    title = "email"
+#    icon = "envelope"
+#    icon_pack = "fa"
+#    link = "mailto:"
 
 #  [[params.social]]
 #    icon = "twitter"
 #    icon_pack = "fa"
 #    link = "//twitter.com/GeorgeCushen"
 
-  [[params.social]]
-    title = "github"
-    icon = "github"
-    icon_pack = "fa"
-    link = "//github.com/R-Lionheart"
+#  [[params.social]]
+#    title = "github"
+#    icon = "github"
+#    icon_pack = "fa"
+#    link = "//github.com/R-Lionheart"
  
  
 +++
+
+Elad's work is targeted to the development of high resolution remote-sensing methodologies, focusing on the Gulf of Aqaba's ecosystem.
 
