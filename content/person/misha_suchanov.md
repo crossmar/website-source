@@ -28,15 +28,6 @@ keybase = ""
 # Order that this section will appear in.
 weight = 4
 
-# List your academic interests.
-# [interests]
-#  interests = [
-#    "Artificial Intelligence",
-#    "Computational Linguistics",
-#    "Information Retrieval"
-#  ]
-
-# List your qualifications (such as academic degrees).
 
 [[education.courses]]
   course = "BSc in Marine Sciences and Marine Environment"
