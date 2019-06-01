@@ -1,6 +1,3 @@
-his into your .travis.yml file and edit it as necessary (instrucions provided).
-
-
 language: go
 
 go:
