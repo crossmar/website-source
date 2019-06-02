@@ -1,22 +1,49 @@
 language: go
+go: master
 
-go:
-  - master # This uses automatically the latest version of go
+branches:
+  only:
+    - master
+
+before_install:
+  # You can't push any changes without providing user.name and user.email to git.
+  - git config user.name "${GIT_NAME}"
+  - git config user.email "${GIT_EMAIL}"
 
 install:
-  - go get https://github.com/gohugoio/hugo # This provides the latest version of Hugo to Travis CI
+  # Get Hugo from master branch, or download latest hugo.deb package from the
+  # Releases tab.
+  - go get github.com/gohugoio/hugo
+
+before_script:
+  # Clone old site files and remove them entirely. This step would save the
+  # history, so you wouldn't get any history-related issues if you would like
+  # to host your master branch via Caddy http.git plugin or something simular.
+  - git clone --depth 1 https://github.com/${GITHUB_USER}/${GITHUB_SOURCE_REPO}.git --branch ${SOURCE_BRANCH} --single-branch public
+  - cd public && git rm -rf . && cd ..
 
 script:
-  - hugo # This commands builds your website on travis
+  # You have to clone a theme if you cloned it to themes folder before.
+  # - git clone <theme_repo> themes/<theme_name>
+  # Otherwise you may want to add submodule with command:
+  #     git submodule add <theme_repo> themes/<theme_name>
+  # and skip clone step entirely.
+  - hugo
 
-deploy:
-  local_dir: public # Default static site output dir for Hugo
-  repo: crossmar/crossmar.github.io # This is the slug of the repo you want to deploy your site to
-  target_branch: master # GitHub pages branch to deploy to (in other cases it can be gh-pages)
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # This is the authentication which you will setup in the next step in travis-ci dashboard
-  email: shaief@gmail.com
-  name: "Shai Efrati"
-  on:
-    branch: master
+after_success:
+  - cd public
+  - git add --all
+  - git commit -m "Generated Hugo Site by Travis CI [Build#${TRAVIS_BUILD_NUMBER}]"
+  # Don't forget to use --quiet flag, you don't want to expose your credentials
+  # to Travis' console.
+  - git push --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_USER}/${GITHUB_REPO}.git" ${TARGET_BRANCH}
+
+env:
+  global:
+    - GIT_NAME: "Travis CI"
+    - GITHUB_USER: crossmar
+    - GITHUB_REPO: website-source
+    - SOURCE_BRANCH: master
+    - GITHUB_REPO: crossmar.github.io
+    - TARGET_BRANCH: master
+    
